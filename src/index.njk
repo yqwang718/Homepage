@@ -1,0 +1,114 @@
+---
+layout: base.njk
+title: Home
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-layout">
+    <img src="/assets/headshot.png" alt="Yuki (Yuqing) Wang" class="hero-headshot">
+    <div class="hero-text">
+    <p class="hero-greeting">Hi, I am</p>
+    <h1 class="hero-name">{{ site.name }}.</h1>
+    <p class="hero-tagline">{{ site.role }} at {{ site.affiliation }}.</p>
+    <p class="hero-summary">
+      I model how offenders make locational choices and what makes a place more likely to be targeted.
+    </p>
+    <div class="hero-tags">
+      <span class="tag">Spatial-Temporal Analysis One</span>
+      <span class="tag">Network Analysis</span>
+      <span class="tag">Computing Acceleration</span>
+      <span class="tag">Quantitative Methods</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#publications" class="btn btn-primary">Publications</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>
+        I am a PhD candidate in Criminology, Law and Society at the University of California, Irvine. My research focuses on understanding how offenders and victims make spatial decisions — why certain locations are chosen and what environmental characteristics make a place more likely to be targeted. I approach these questions through discrete choice models, spatial econometrics, and network analysis.
+      </p>
+      <p>
+        On the computational side, I build GPU-accelerated estimation pipelines in JAX for high-dimensional spatial models, achieving orders-of-magnitude speedups over traditional approaches. My work integrates large-scale administrative data, census demographics, and business establishment records to study crime patterns at multiple geographic scales.
+      </p>
+      <p>
+        I also serve as a reviewer for <em>Social Science &amp; Medicine</em>, <em>Machine Learning: Science and Technology</em>, and the International Joint Conference on Neural Networks (IJCNN 2025).
+      </p>
+    </div>
+    <div class="quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="{{ site.orcid }}" target="_blank" rel="noopener">ORCID</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Work / Projects -->
+<section class="section section-alt" id="publications">
+  <div class="container">
+    <h2 class="section-title">Publications</h2>
+
+    <div class="work-grid">
+
+      <article class="work-card work-card--horizontal">
+        <img src="/assets/nc_map.jpg" alt="Map showing ¼ mile buffers around three random blocks in a census tract" class="work-card-img">
+        <div class="work-card-body">
+          <h3 class="work-card-title">Measuring the Spatial Scale of Structural Racism and Discrimination</h3>
+          <p class="work-card-meta">John R. Hipp, <strong>Yuqing Wang</strong>, et al. — <em>Social Science &amp; Medicine,</em> 2026</p>
+          <p class="work-card-desc">
+            Explores how structural racism operates at different spatial scales and its consequences for life expectancy. Constructs novel meso-level measures — including eviction rates, housing vacancies, loan denials, and proximity to toxic waste — at four buffer radii, alongside county-level racial inequality. Finds a nonlinear relationship where life expectancy drops sharply at higher concentrations of multidimensional structural racism. My contribution: data curation (geocoding, multi-source spatial data processing) and geospatial concept visualization.
+          </p>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0277953625011426" class="work-card-link">View &rarr;</a>
+        </div>
+      </article>
+
+      <article class="work-card work-card--horizontal">
+        <img src="/assets/dallas_map_biz.png" alt="Geographic distribution of census blocks in this study" class="work-card-img">
+        <div class="work-card-body">
+          <h3 class="work-card-title">How Does the Business Environment Shape Mobility by Offenders and Mobile Targets?</h3>
+          <p class="work-card-meta">John R. Hipp, <strong>Yuqing Wang</strong> — <em>Crime &amp; Delinquency,</em> Accepted</p>
+          <p class="work-card-desc">
+            Uses discrete choice models on 653,000+ geocoded crime records to examine how business composition at the census-block level shapes where offenders and victims travel. Finds that blocks with a greater mix of consumer-facing businesses are especially attractive to offenders, and that the surrounding 400-meter business context further increases targeting — estimated without sampling via GPU-accelerated MLE in JAX.
+          </p>
+        </div>
+      </article>
+
+      <article class="work-card work-card--horizontal">
+        <img src="/assets/population_partition.png" alt="Population Partition diagram showing deterrence regions by discount rate and wealth" class="work-card-img">
+        <div class="work-card-body">
+          <h3 class="work-card-title">The Optimal Deterrence of Crime: A Focus on the Time Preference of DWI Offenders</h3>
+          <p class="work-card-meta"><strong>Yuqing Wang</strong>, Yan Ru Pei — <em>arXiv,</em> 2019</p>
+          <p class="work-card-desc">
+            Develops a general model for finding optimal penal strategies based on offenders' behavioral traits. Uses hyperbolic time discounting and prospect theory with a 207-participant survey to empirically characterize discount-rate distributions (zero-inflated exponential), then maximizes a social welfare function balancing deterrence benefits against implementation costs for DWI offenses.
+          </p>
+          <a href="https://arxiv.org/abs/1909.06509" class="work-card-link">arXiv &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-card">
+      <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>Office: Social Ecology II, University of California, Irvine</p>
+      <p>Social: <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a> &middot; <a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a> &middot; <a href="{{ site.orcid }}" target="_blank" rel="noopener">ORCID</a></p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,139 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Font options
+\usepackage[sfdefault]{roboto}  % Sans-serif font
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Yuki (Yuqing) Wang} \\\href{mailto:yqwang1@uci.edu}{yqwang1@uci.edu} $|$ 
+  \href{https://www.linkedin.com/in/yuki-wang-1a402736b/}{linkedin.com/in/yuki-wang-1a402736b/} $|$
+  \href{https://github.com/yqwang718}{github.com/yqwang718}$|$
+  \href{https://scholar.google.com/citations?user=S5f5O1kAAAAJ&hl=en}{Google Scholar}
+\end{center}
+
+% \section*{Summary}
+% PhD candidate with strong expertise in data science, machine learning, and quantitative modeling, applying advanced AI and geospatial methods to large-scale real-world datasets. Experienced in statistical modeling, network analysis, and spatial data processing using Python, ArcGIS Pro and GPU-accelerated optimization. Research focuses on pattern discovery, predictive modeling, and complex behavioral systems, with a strong background in research and teaching assistance.
+
+\section{Qualifications}
+5+ years of research experience in machine learning, econometric modeling, and spatial analysis, with a focus on efficient training, large-scale inference and human behavior. Developed advanced models for spatial choice behavior (e.g., discrete choice models with network effects) and social network analysis. Implemented GPU-accelerated maximum likelihood estimation (MLE) in JAX for efficient optimization of high-dimensional models. Applied inference methods, including inverse probability weighting (IPW), to address selection bias in observational data. Expertise in spatial data processing, geocoding, and integration of census and administrative datasets for policy-relevant research. 
+
+\section{Technical Skills}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Python \& Data Libraries}: JAX, NumPy, Pandas, Folium, SciPy, Statsmodels, NetworkX, GeoPandas, Matplotlib}
+  \resumeItem{\textbf{High-Performance Computing}: GPU-accelerated maximum likelihood estimation, parallel processing, large-scale data processing}
+  \resumeItem{\textbf{Data Engineering \& Analytics}: Large-scale administrative data, geocoding and spatial joins, census and business data integration, feature engineering, data validation, data visualization, Geospatial mapping}
+  \resumeItem{\textbf{Statistical Methods}: Negative binomial regression, Discrete Choice Models, Network Analysis, Spatial Econometrics, Inverse Probability Weighting (IPW), Zero-Inflated Exponential Distributions and Non-Linear Regression Analysis}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingList
+
+\resumeSubheading{Discrete Choice Modeling of Offender and Victim Location Selection}{Jan 2022 -- Aug 2025}{JAX, NumPy, Pandas, GeoPandas, GPU Acceleration, ArcGIS Pro}{}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Developed large-scale discrete choice models to analyze spatial mobility using 653,000+ geocoded crime records (Dallas, 2014--2020)}
+\resumeItem{\textbullet\ Designed end-to-end data pipelines integrating administrative crime data, U.S.\ Census demographics, business establishment data, and geospatial features}
+\resumeItem{\textbullet\ Wrote a custom GPU-accelerated MLE optimizer in JAX, achieving \textbf{~1000$\times$ speedup} over standard optimization approaches}
+\resumeItem{\textbullet\ Developed a scalable, reusable DCM library supporting high-dimensional spatial choice modeling}
+% \resumeItem{\textbullet\ Built interactive geospatial visualizations using Python (Folium) to support exploratory analysis}
+\resumeItem{\textbullet\ Paper presented at the 2022 American Society of Criminology; Under review at the \emph{Journal of Quantitative Criminology}}
+\resumeSubHeadingListEnd
+
+\resumeSubheading{City Crime Network Analysis}{March 2025 -- Present}{NetworkX, Pandas, NumPy, GeoPandas, scikit-learn}{Conference Panel Chair}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Constructed large-scale co-arrest and co-victimization networks to model urban crime dynamics}
+\resumeItem{\textbullet\ Engineered network features (centrality, cohesion, clustering) for downstream statistical and ML analysis}
+\resumeItem{\textbullet\ Modeled interaction effects between network structure and spatial distance to quantify compounded risk patterns}
+\resumeItem{\textbullet\ Led and chaired a conference panel; paper presented at the 2025 American Society of Criminology}
+\resumeSubHeadingListEnd
+
+\resumeSubheading{Spatial Analysis of Business Environment and Crime}{Jan 2024 -- Jan 2026}{JAX, PyTorch, SciPy, GeoPandas, Pandas, NumPy, Matplotlib, Seaborn, Folium}{}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Modeled relationships between business composition and crime mobility using spatial and statistical methods}
+\resumeItem{\textbullet\ Conducted comparative analysis across offenders vs.\ victims and six major crime categories to identify systematic differences in spatial behavior}
+\resumeItem{\textbullet\ Paper presented at the 2024 Western Society of Criminology; Published in Crime\&Delinquency}
+\resumeSubHeadingListEnd
+
+\resumeSubheading{Measuring the spatial scale of structural racism and discrimination}{Sep 2023 -- Oct 2025}{Pandas, NumPy, GeoPandas, Matplotlib, Folium, Branca}{Research assistance}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Curated, geocoded, and processed multi-scale spatial, survey, and administrative datasets for national large-scale geographic analysis}
+\resumeItem{\textbullet\ Generated geospatial concept map to communicate complex spatial patterns}
+\resumeItem{\textbullet\ Published in Social Science \& Medicine}
+\resumeSubHeadingListEnd
+
+\resumeSubheading{The Optimal Deterrence of Crime: A Focus on the Time Preference of DWI Offenders}{Jan 2019 -- Sep 2019}{}{}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Designed and executed a behavioral study with 207 participants via an online survey platform to model complex decision-making trade-offs.}
+\resumeItem{\textbullet\ Applied Hyperbolic Time Discounting and Prospect Theory to identify user "points of indifference" between competing constraints, providing human-centered insights into risk perception.}
+\resumeItem{\textbullet\ Developed a mathematical optimization framework to maximize "Social Welfare" by balancing implementation costs against deterrent benefits, similar to product resource allocation.}
+\resumeItem{\textbullet\ Analyzed algorithmic time complexity to ensure model tractability for large-scale population data}
+\resumeItem{\textbullet\ Translated qualitative behavioral traits into quantitative models, such as the Probability Weighting Function, to inform strategic policy recommendations.}
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingList
+  \resumeSubheading
+      {University of California, Irvine}{Irvine, CA}
+      {PhD Candidate in Criminology, Law and Society}{Aug 2021 -- Present}
+  \resumeSubheading
+      {University of Macau}{Macau, China}
+      {M.S in Criminology and Criminal Justice}{Sep 2018 -- Jan 2021}
+\resumeSubHeadingListEnd
+
+\section{Professional Service}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Conference Reviewer}: International Joint Conference on Neural Networks (IJCNN 2025)}
+  \resumeItem{\textbf{Journal Reviewer}: Social Science \& Medicine}
+  \resumeItem{\textbf{Journal Reviewer}: Machine Learning: Science and Technology}
+\resumeSubHeadingListEnd
+
+\end{document}
