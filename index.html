@@ -114,13 +114,13 @@
         <h1 class="hero-name">Yuki (Yuqing) Wang.</h1>
         <p class="hero-tagline">PhD Candidate in Criminology, Law and Society at University of California, Irvine.</p>
         <p class="hero-summary">
-          I model how offenders make locational choices and what makes a place more likely to be targeted.
+          I model how offenders make locational choices and how routine activities shape spatial exposure to victimization risk.
         </p>
         <div class="hero-tags">
-          <span class="tag">Spatial-Temporal Analysis</span>
-          <span class="tag">Network Analysis</span>
-          <span class="tag">Computing Acceleration</span>
-          <span class="tag">Quantitative Methods</span>
+          <span class="tag">Spatial and Temporal Analysis</span>
+          <span class="tag">Network Measurement</span>
+          <span class="tag">Computational Acceleration</span>
+          <span class="tag">Discrete Choice Models</span>
         </div>
         <div class="hero-actions">
           <a href="#publications" class="btn btn-primary">Publications</a>
@@ -135,10 +135,10 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <p>
-            I am a PhD candidate in Criminology, Law and Society at the University of California, Irvine, and a member of the Irvine Laboratory for the Study of Space and Crime (<a href="https://ilssc.soceco.uci.edu/" target="_blank" rel="noopener">ILSSC</a>). My research focuses on understanding how offenders and victims make spatial decisions — why certain locations are chosen and what environmental characteristics make a place more likely to be targeted. I approach these questions through discrete choice models, spatial econometrics, and network analysis.
+            I am a PhD candidate in Criminology, Law and Society at the University of California, Irvine, and a member of the Irvine Laboratory for the Study of Space and Crime (<a href="https://ilssc.soceco.uci.edu/" target="_blank" rel="noopener">ILSSC</a>). My research asks why offenders travel to some places to commit crime and how people's routine activities expose them to victimization risk. I approach these questions through discrete choice models, spatial and temporal analysis, and measures of relational activity recorded in police data.
           </p>
           <p>
-            On the computational side, I build GPU-accelerated estimation pipelines in JAX for high-dimensional spatial models, achieving orders-of-magnitude speedups over traditional approaches. My work integrates large-scale administrative data, census demographics, and business establishment records to study crime patterns at multiple geographic scales.
+            On the computational side, I build memory-efficient estimation pipelines in JAX for large spatial-choice models. The software makes it possible to use the full offender and victim samples and evaluate every Dallas spatial alternative without sampling observations or locations, while controlling memory demands on CPU or GPU hardware. My work integrates administrative records, census demographics, and business establishment data to study crime patterns at multiple geographic scales.
           </p>
           <p>
             I also serve as a reviewer for <em>Social Science &amp; Medicine</em>, <em>Crime Prevention and Community Safety</em>, <em>Machine Learning: Science and Technology</em>, and the International Joint Conference on Neural Networks (IJCNN 2025).
@@ -192,7 +192,7 @@
               <h3 class="work-card-title">How Does the Business Environment Shape Mobility by Offenders and Mobile Targets?</h3>
               <p class="work-card-meta">John R. Hipp, <strong>Yuqing Wang</strong> — <em>Crime &amp; Delinquency,</em> 2026</p>
               <p class="work-card-desc">
-                Uses discrete choice models on 653,000+ geocoded crime records to examine how business composition at the census-block level shapes where offenders and victims travel. Finds that blocks with a greater mix of consumer-facing businesses are especially attractive to offenders, and that the surrounding 400-meter business context further increases targeting — estimated without sampling via GPU-accelerated MLE in JAX.
+                Uses discrete choice models on more than 653,000 geocoded crime records to examine how business composition at the census-block level shapes offender mobility and the spatial exposure underlying observed victimization. Finds that blocks with a greater mix of consumer-facing businesses are especially attractive to offenders and that the surrounding quarter-mile business context further increases targeting. The JAX estimator uses the full sample and every census-block alternative without sampling observations or locations.
               </p>
               <a href="https://journals.sagepub.com/doi/full/10.1177/00111287261423080" class="work-card-link">View &rarr;</a>
             </div>
